@@ -48,8 +48,19 @@ public class Paquete {
             return tope.paquete;
         }
 
+        public void mostrar() {
+            if (isEmpty()) {
+                System.out.println("El almacén no tiene paquetes registrados.");
+                return;
+            }
+            System.out.println("---CONTENIDO DEL ALMACÉN---");
+            PaqueteNodo actual = tope;
+            while (actual != null) {
+                System.out.println(actual.paquete + " | ");
+                actual = actual.siguiente;
+            }
 
-
+        }
 
     }
 }
