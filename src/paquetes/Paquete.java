@@ -27,8 +27,22 @@ public class Paquete {
             paquetes.PaqueteNodo nuevoNodo = new paquetes.PaqueteNodo(paquete);
             nuevoNodo.siguiente = tope;
             tope = nuevoNodo;
-            System.out.println("-> Paquete registrado exitosamente.");
+            System.out.println("Paquete registrado exitosamente");
         }
+
+        public Paquete pop() {
+            if (isEmpty()) {
+                System.out.println("ERROR - No hay paquetes para retirar");
+                return null;
+            }
+            Paquete paqueteRetirado = tope.paquete;
+            tope = tope.siguiente;
+            return paqueteRetirado;
+        }
+
+
+
+
     }
 }
 
