@@ -12,7 +12,7 @@ public class Paquete {
         this.peso = peso;
     }
 
-    public class PaquetePila {
+    public static class PaquetePila {
         private paquetes.PaqueteNodo tope;
 
         public PaquetePila() {
@@ -79,8 +79,10 @@ public class Paquete {
             }
             System.out.println("No existe un paquete con el ID señalado");
         }
-    }
+
 
     }
+
 }
+
 
