@@ -40,6 +40,14 @@ public class Paquete {
             return paqueteRetirado;
         }
 
+        public Paquete peek() {
+            if (isEmpty()) {
+                System.out.println("El almacén está vacío");
+                return null;
+            }
+            return tope.paquete;
+        }
+
 
 
 
