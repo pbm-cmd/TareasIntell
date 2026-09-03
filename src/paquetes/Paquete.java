@@ -1,5 +1,7 @@
 package paquetes;
 import java.util.Scanner;
+import paquetes.PaqueteNodo;
+import paquetes.PaquetePila;
 
 public class Paquete {
     int id;
