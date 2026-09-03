@@ -59,8 +59,27 @@ public class Paquete {
                 System.out.println(actual.paquete + " | ");
                 actual = actual.siguiente;
             }
-
         }
+
+        public void buscar(int id) {
+            if (isEmpty()) {
+                System.out.println("No existe un paquete con el ID señalado");
+                return;
+            }
+            PaqueteNodo actual = tope;
+            while (actual != null) {
+                if (actual.paquete.id == id) {
+                    System.out.println("Paquete encontrado:");
+                    System.out.println("ID: " + actual.paquete.id);
+                    System.out.println("Descripción: " + actual.paquete.descripcion);
+                    System.out.println("Peso: " + actual.paquete.peso + " kg");
+                    return;
+                }
+                actual = actual.siguiente;
+            }
+            System.out.println("No existe un paquete con el ID señalado");
+        }
+    }
 
     }
 }
