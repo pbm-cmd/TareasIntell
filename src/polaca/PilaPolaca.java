@@ -26,17 +26,17 @@ public class PilaPolaca<T> {
             return valor;
         }
 
-        public T peek() {
-            if (isEmpty()) {
-                return null;
-            }
-            return tope.getValor();
-        }
-
         public boolean isEmpty() {
             return tope == null;
         }
         public int getSize() {
             return size;
         }
+
+        public T verTope() {
+        if (isEmpty()) {
+            return null;
+        }
+        return tope.getValor();
+    }
 }
