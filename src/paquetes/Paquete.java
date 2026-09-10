@@ -12,6 +12,11 @@ public class Paquete {
         this.peso = peso;
     }
 
+    @Override
+    public String toString() {
+        return "ID: " + id + ", Descripción: " + descripcion + ", Peso: " + peso + " kg";
+    }
+
     public static class PaquetePila {
         private paquetes.PaqueteNodo tope;
 

@@ -9,7 +9,7 @@ public class Main {
             int opcion = 0;
 
             do {
-                System.out.print("Selecciona una opción: ");
+                System.out.println("Selecciona una opción: ");
                 System.out.println("-----ALMACÉN-----");
                 System.out.println("1. Registrar paquete");
                 System.out.println("2. Retirar paquete");
