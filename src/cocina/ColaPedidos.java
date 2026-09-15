@@ -22,7 +22,21 @@ public class ColaPedidos {
             finalCola.setSiguiente(nuevoNodo);
             finalCola = nuevoNodo;
         }
-        System.out.println("Pedido " + pedido.getNumero() + " registrado con éxito.");
+        System.out.println("Pedido " + pedido.getNumero() + " registrado");
+    }
+
+    public Pedido dequeue() {
+        if (isEmpty()) {
+            System.out.println("No hay pedidos pendientes en la cola");
+            return null;
+        }
+        Pedido pedidoAtendido = frente.getPedido();
+        frente = frente.getSiguiente();
+
+        if (frente == null) {
+            finalCola = null;
+        }
+        return pedidoAtendido;
     }
 
 }
