@@ -46,6 +46,21 @@ public class ColaPedidos {
         }
         return frente.getPedido();
     }
+
+    public void mostrar() {
+        if (isEmpty()) {
+            System.out.println("No hay pedidos pendientes");
+            return;
+        }
+        System.out.println("--PEDIDOS PENDIENTES--");
+        Nodo actual = frente;
+        while (actual != null) {
+            Pedido p = actual.getPedido();
+            System.out.println(p.getNumero() + " - " + p.getPlatillo() + " (" + p.getCliente() + ")");
+            actual = actual.getSiguiente();
+        }
+    }
+
 }
 
 
