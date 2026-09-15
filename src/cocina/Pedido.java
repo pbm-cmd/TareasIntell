@@ -5,7 +5,7 @@ public class Pedido {
     private String cliente;
     private String platillo;
     private int cantidad;
-    private int tiempoEstimado; // En minutos
+    private int tiempoEstimado;
 
     public Pedido(int numero, String cliente, String platillo, int cantidad, int tiempoEstimado) {
         this.numero = numero;
@@ -31,6 +31,10 @@ public class Pedido {
         return tiempoEstimado;
     }
 
+    @Override
+    public String toString() {
+        return "Pedido #" + numero + " | Cliente: " + cliente + " | Platillo: " + platillo + " (x" + cantidad + ") | Tiempo: " + tiempoEstimado + " min";
+    }
 
 
 }
