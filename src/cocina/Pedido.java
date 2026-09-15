@@ -15,4 +15,22 @@ public class Pedido {
         this.tiempoEstimado = tiempoEstimado;
     }
 
+    public int getNumero() {
+        return numero;
+    }
+    public String getCliente() {
+        return cliente;
+    }
+    public String getPlatillo() {
+        return platillo;
+    }
+    public int getCantidad() {
+        return cantidad;
+    }
+    public int getTiempoEstimado() {
+        return tiempoEstimado;
+    }
+
+
+
 }
