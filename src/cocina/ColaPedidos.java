@@ -61,6 +61,16 @@ public class ColaPedidos {
         }
     }
 
+    public Pedido buscarPedido(int numero) {
+        Nodo actual = frente;
+        while (actual != null) {
+            if (actual.getPedido().getNumero() == numero) {
+                return actual.getPedido();
+            }
+            actual = actual.getSiguiente();
+        }
+        return null;
+    }
 }
 
 
