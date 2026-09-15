@@ -71,6 +71,14 @@ public class ColaPedidos {
         }
         return null;
     }
+
+    public int calcularTiempoTotal() {
+        int tiempoTotal = 0;
+        Nodo actual = frente;
+        while (actual != null) {
+            tiempoTotal += actual.getPedido().getTiempoEstimado();
+            actual = actual.getSiguiente();
+        }
+        return tiempoTotal;
+    }
 }
-
-
