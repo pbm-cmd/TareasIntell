@@ -39,4 +39,13 @@ public class ColaPedidos {
         return pedidoAtendido;
     }
 
+    public Pedido peek() {
+        if (isEmpty()) {
+            System.out.println("La cola está vacía");
+            return null;
+        }
+        return frente.getPedido();
+    }
+    }
+
 }

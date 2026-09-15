@@ -33,7 +33,7 @@ public class Pedido {
 
     @Override
     public String toString() {
-        return "Pedido #" + numero + " | Cliente: " + cliente + " | Platillo: " + platillo + " (x" + cantidad + ") | Tiempo: " + tiempoEstimado + " min";
+        return "Pedido #" + numero + " | Cliente: " + cliente + " | Platillos: " + platillo + " (" + cantidad + " unidades) | Tiempo: " + tiempoEstimado + " min";
     }
 
 
