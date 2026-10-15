@@ -5,6 +5,15 @@ public class Main {
 
     public static void main(String[] args) {
         int[] datos = {35, 12, 89, 5, 2, 74, 43, 19};
+        System.out.println("Arreglo original: " + Arrays.toString(datos));
+
+        System.out.println("Inserción:  " + Arrays.toString(ordenarInsercion(datos.clone())));
+        System.out.println("Selección:  " + Arrays.toString(ordenarSeleccion(datos.clone())));
+        System.out.println("ShellSort:  " + Arrays.toString(ordenarShell(datos.clone())));
+
+        int[] copiaQuick = datos.clone();
+        quickSort(copiaQuick, 0, copiaQuick.length - 1);
+        System.out.println("QuickSort:  " + Arrays.toString(copiaQuick));
     }
 
     public static int[] ordenarInsercion(int[] arr) {
