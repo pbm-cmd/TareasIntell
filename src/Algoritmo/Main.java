@@ -32,4 +32,26 @@ public class Main {
         }
         return arr;
     }
+
+    public static void quickSort(int[] arr, int bajo, int alto) {
+        if (bajo < alto) {
+            int pivote = arr[alto];
+            int i = bajo - 1;
+            for (int j = bajo; j < alto; j++) {
+                if (arr[j] <= pivote) {
+                    i++;
+                    int temp = arr[i];
+                    arr[i] = arr[j];
+                    arr[j] = temp;
+                }
+            }
+            int temp = arr[i + 1];
+            arr[i + 1] = arr[alto];
+            arr[alto] = temp;
+
+            int p = i + 1;
+            quickSort(arr, bajo, p - 1);
+            quickSort(arr, p + 1, alto);
+        }
+    }
 }
