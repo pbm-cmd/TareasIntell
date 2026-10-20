@@ -10,4 +10,9 @@ public class Elemento {
         this.descripcion = descripcion;
         this.prioridad = prioridad;
     }
+
+    @Override
+    public String toString() {
+        return "ID: " + id + " | Desc: " + descripcion + " | Prioridad: " + prioridad;
+    }
 }
